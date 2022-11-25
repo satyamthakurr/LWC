@@ -1,0 +1,24 @@
+<template>
+<lightning-card title="EventWithData" icon-name="standard:logging">
+<template if:true={contacts.data}>
+<lightning-layout class="slds-var-m-around_medium">
+<lightning-layout-item>
+<template for:each={contacts.data} for:item="contact">
+<c-contact-list-item
+class="slds-show slds-is-relative"
+key={contact.id}
+contact={contact}
+onselect={handleselect}
+></c-contact-list-item>
+</template>
+
+</lightning-layout-item>
+</lightning-layout>
+
+
+</template>
+
+
+</lightning-card>
+
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <p>Hey Welcome...</p>
+    <lightning-layout padding="around-small">
+        <lightning-layout-item>
+            <lightning-button label="Click me to see Map Values" onclick={handleClick} variant="brand"></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+        <template for:each={maps} for:item="items">
+            {items.key}  ==>> {items.value}
+        </template>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
